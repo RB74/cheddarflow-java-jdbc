@@ -96,7 +96,7 @@ public final class JdbcTemplates {
         props.put("dataSource.password", this.dbPassword);
         props.put("transactionIsolation", "TRANSACTION_REPEATABLE_READ");
         props.put("poolName", tenantIdentifier + " Master Data Source" + (readOnly ? " (Read-Only)" : ""));
-        props.put("maximumPoolSize", "10");
+        props.put("maximumPoolSize", "100");
         props.put("minimumIdle", "2");
         props.put("registerMbeans", "false");
         props.put("connectionTestQuery", readOnly ? "select 1" : "/* ping */");
